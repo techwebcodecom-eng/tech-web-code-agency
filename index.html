@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tech Web Code | Learn, Build & Earn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <meta name="description" content="Tech Web Code provides web development courses, services, blogs, and real-world projects." />
+  <meta name="keywords" content="Web Development, HTML, CSS, JavaScript, React, Freelancing" />
+
+  <!-- Google AdSense (ADD REAL CODE AFTER APPROVAL) -->
+  <!--
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    data-ad-client="ca-pub-XXXXXXXXXXXX"
+    crossorigin="anonymous"></script>
+  -->
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #020617;
+      --text: #ffffff;
+      --accent: #2563eb;
+    }
+
+    body.light {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #020617;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: all 0.4s ease;
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--card);
+      padding: 15px 35px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo img {
+      height: 42px;
+      border-radius: 6px;
+    }
+
+    nav a {
+      margin-left: 18px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .toggle {
+      margin-left: 20px;
+      cursor: pointer;
+      padding: 6px 12px;
+      background: var(--accent);
+      border-radius: 6px;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    section {
+      padding: 80px 40px;
+      animation: fadeUp 1s ease;
+    }
+
+    @keyframes fadeUp {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      background: linear-gradient(to right, #1e3a8a, #2563eb);
+      color: #fff;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .hero img {
+      width: 100%;
+      max-width: 480px;
+      border-radius: 14px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px 10px 0 0;
+      padding: 12px 26px;
+      background: #020617;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 25px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .ads {
+      background: #111827;
+      border: 2px dashed #2563eb;
+      text-align: center;
+      padding: 30px;
+      margin-top: 40px;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .social a {
+      margin: 0 10px;
+      color: var(--accent);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 12px;
+      border-radius: 6px;
+      border: none;
+    }
+
+    form button {
+      background: var(--accent);
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+      background: var(--card);
+      text-align: center;
+      padding: 25px;
+      font-size: 14px;
+    }
+
+    @media(max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <img src="https://i.ibb.co/67DzB6h9/logo.png" alt="Tech Web Code Logo">
+    <h1>Tech Web Code</h1>
+  </div>
+
+  <div>
+    <nav style="display:inline;">
+      <a href="#home">Home</a>
+      <a href="#courses">Courses</a>
+      <a href="#services">Services</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <span class="toggle" onclick="toggleTheme()">Dark / Light</span>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div>
+    <h2>Learn, Build & Earn with Tech Web Code</h2>
+    <p>Web Development Courses, Professional Services & Real-World Projects</p>
+    <a href="#courses" class="btn">Start Learning</a>
+    <a href="#services" class="btn">Hire Us</a>
+  </div>
+
+  <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Web Development">
+</section>
+
+<!-- MISSION -->
+<section>
+  <h2>Our Mission</h2>
+  <p>
+    Our mission is to empower students with practical web development skills
+    and help businesses grow through modern digital solutions.
+  </p>
+</section>
+
+<!-- COURSES -->
+<section id="courses">
+  <h2>Courses</h2>
+  <div class="grid">
+    <div class="card"><h3>HTML & CSS</h3><p>Build responsive websites from scratch.</p></div>
+    <div class="card"><h3>JavaScript</h3><p>Logic, DOM and real projects.</p></div>
+    <div class="card"><h3>React</h3><p>Modern frontend development.</p></div>
+    <div class="card"><h3>Freelancing</h3><p>Get clients and earn online.</p></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <h2>Services</h2>
+  <div class="grid">
+    <div class="card">Website Development</div>
+    <div class="card">WordPress Websites</div>
+    <div class="card">Business & Agency Websites</div>
+    <div class="card">Portfolio Websites</div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <h2>Blog</h2>
+  <div class="grid">
+    <div class="card"><h3>How to Start Web Development</h3><p>Complete beginner roadmap.</p></div>
+    <div class="card"><h3>HTML, CSS & JavaScript Explained</h3><p>Frontend fundamentals.</p></div>
+    <div class="card"><h3>How to Earn Online</h3><p>Freelancing & remote work guide.</p></div>
+  </div>
+
+  <!-- ADSENSE PLACE -->
+  <div class="ads">
+    Google AdSense Advertisement Will Appear Here
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Us</h2>
+
+  <!-- Formspree Backend -->
+  <form action="https://formspree.io/f/xbldzqvk" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <p style="margin-top:20px;">
+    Email: <strong>techwebcode.com@gmail.com</strong>
+  </p>
+
+  <div class="social">
+    <a href="https://www.instagram.com/techwebcode.agency?igsh=MWE1cjA1dDJvNDhzOQ==" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com/share/1D5FqChJbb/" target="_blank">Facebook</a>
+    <a href="https://www.linkedin.com/company/techwebcode" target="_blank">LinkedIn</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Tech Web Code. All Rights Reserved.</p>
+</footer>
+
+<script>
+  function toggleTheme() {
+    document.body.classList.toggle("light");
+  }
+</script>
+
+</body>
+</html>
